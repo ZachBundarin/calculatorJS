@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <tr>
+                <td class="heading">
+                    Calculator
+                </td>
+            </tr>
+            
+            <td>
+                <input type="text" id="input" placeholder="0" readonly/>
+                <input type="text" id="result" style="color:green;" readonly/> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value=" CE " onclick="clearScreen()">
+                <input type="button" value=" &#247; " onclick="getOperand('/')">
+                <input type="button" value=" x " onclick="getOperand('x')">
+                <input type="button" value=" &#8592 " onclick="backspace()" style="color: red;">
+                <br>
+                <input type="button" value=" 1 " onclick="getNumber(1)">
+                <input type="button" value=" 2 " onclick="getNumber(2)">
+                <input type="button" value=" 3 " onclick="getNumber(3)">
+                <input type="button" value=" + " onclick="getOperand('+')">
+                <br>
+                <input type="button" value=" 4 " onclick="getNumber(4)">
+                <input type="button" value=" 5 " onclick="getNumber(5)">
+                <input type="button" value=" 6 " onclick="getNumber(6)">
+                <input type="button" value=" - " onclick="getOperand('-')">
+                <br>
+                <input type="button" value=" 7 " onclick="getNumber(7)">
+                <input type="button" value=" 8 " onclick="getNumber(8)">
+                <input type="button" value=" 9 " onclick="getNumber(9)">
+                <input type="button" value=" ( ) " onclick="brackets()">
+                <br>
+                <input type="button" value=" 0 " onclick="getNumber(0)">
+                <input type="button" value=" = " onclick="compute()" style="width: 190px; color: white; background: limegreen;">
+            </td>
+        </tr>
+        
+    </table>
+</body>
+<footer>
+    <p class='footerTitle'>Report
+    </p>
+    <p>The calculator I have made is straight forward. Buttons are pressed and input the symbol into a string. When the equals sign is pressed the equation string is computated with the eval(expressionString) function. I used the two-part calculator with JavaScript guide in the bottom of the report to make this calculator. The main challenge was that the ‘+/-‘ button on the calculator worked extremely poorly. I tried the provided code but it would just add the entire string with a negative symbol which looked very bad. To resolve this issue I removed the ‘+/-‘ button all together since the ‘-‘ button works the same way with the eval(expressionString) function. This resolved most problems I had with the calculator.</p>
+    <a href="https://www.youtube.com/watch?v=TX30jTaPs28"target="_blank">Part 1</a>
+    <a href="https://www.youtube.com/watch?v=7HiC7RK6f-c"target="_blank">Part 2</a>
+</footer>
+</html>
